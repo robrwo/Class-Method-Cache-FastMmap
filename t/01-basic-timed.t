@@ -4,7 +4,7 @@ package Foo;
 
 use Moo;
 
-use Class::Method::Cache;
+use Class::Method::Cache::FastMmap;
 
 has delay => (
     is      => 'ro',

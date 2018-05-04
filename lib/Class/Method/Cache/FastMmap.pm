@@ -1,4 +1,4 @@
-package Class::Method::Cache;
+package Class::Method::Cache::FastMmap;
 
 # ABSTRACT: Cache method results using Cache::FastMmap
 
@@ -21,7 +21,7 @@ our @EXPORT_OK = @EXPORT;
 
   package MyClass;
 
-  use Class::Method::Cache;
+  use Class::Method::Cache::FastMmap;
 
   sub my_method {
     ...
