@@ -8,8 +8,8 @@
 ^blib/
 ^pm_to_blib$
 
-Cache-Method-Cache-FastMmap-.*\.tar\.gz
-Cache-Method-Cache-FastMmap-v\d+\.\d+\.\d+/
+Class-Method-Cache-FastMmap-.*\.tar\.gz
+Class-Method-Cache-FastMmap-v\d+\.\d+\.\d+/
 
 ^MYMETA\.*
 

@@ -1,6 +1,7 @@
-Revision history for Cache-Method-Cache-FastMmap
+Revision history for Class-Method-Cache-FastMmap
 
 {{$NEXT}}
+- Fixed typo in distribution name.
 
 v0.1.0    2018-05-05 01:13:40+01:00 Europe/London
 - Initial version released.

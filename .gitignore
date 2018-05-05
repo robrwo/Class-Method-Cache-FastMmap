@@ -1,4 +1,4 @@
-Cache-Method-Cache-FastMmap-*/
-Cache-Method-Cache-FastMmap-*.tar.gz
+Class-Method-Cache-FastMmap-*/
+Class-Method-Cache-FastMmap-*.tar.gz
 .build/
 cpanfile.snapshot
