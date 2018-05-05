@@ -37,9 +37,7 @@ our @EXPORT_OK = @EXPORT;
 This package allows you to easily cache the results of a method call
 using L<Cache::FastMmap>.
 
-=head1 EXPORTS
-
-=head2 C<cache>
+=export C<cache>
 
   cache $method => %options;
 
