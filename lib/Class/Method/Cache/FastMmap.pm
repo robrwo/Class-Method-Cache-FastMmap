@@ -12,7 +12,7 @@ use Class::Method::Modifiers qw/ install_modifier /;
 use Exporter qw/ import /;
 use Object::Signature ();
 
-our $VERSION = 'v0.2.0';
+our $VERSION = 'v0.2.1';
 
 our @EXPORT    = qw/ cache /;
 our @EXPORT_OK = @EXPORT;
