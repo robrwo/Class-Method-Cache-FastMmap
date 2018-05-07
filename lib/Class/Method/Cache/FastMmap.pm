@@ -13,7 +13,7 @@ use Cache::FastMmap;
 use Class::Method::Modifiers qw/ install_modifier /;
 use Object::Signature ();
 
-our $VERSION = 'v0.3.0';
+our $VERSION = 'v0.3.1';
 
 our @EXPORT    = qw/ cache /;
 our @EXPORT_OK = @EXPORT;
