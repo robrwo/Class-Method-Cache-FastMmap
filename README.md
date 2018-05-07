@@ -60,14 +60,14 @@ The `%options` are as follows:
     $key_cb->( [ $self, @_ ] );
     ```
 
-    Remaining `%options` are passed to the constructor for
-    [Cache::FastMmap](https://metacpan.org/pod/Cache::FastMmap).
-
 - `prefix`
 
     This is the prefix too prepend to the key. It defaults to the class
     and method name when the ["cache"](#cache) is specified, or an empty string
     otherwise.
+
+Remaining `%options` are passed to the constructor for
+[Cache::FastMmap](https://metacpan.org/pod/Cache::FastMmap).
 
 # SEE ALSO
 

@@ -65,9 +65,6 @@ corresponding to the original method call parameters:
 
   $key_cb->( [ $self, @_ ] );
 
-Remaining C<%options> are passed to the constructor for
-L<Cache::FastMmap>.
-
 =item C<prefix>
 
 This is the prefix too prepend to the key. It defaults to the class
@@ -75,6 +72,9 @@ and method name when the L</cache> is specified, or an empty string
 otherwise.
 
 =back
+
+Remaining C<%options> are passed to the constructor for
+L<Cache::FastMmap>.
 
 =cut
 
