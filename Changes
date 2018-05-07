@@ -1,6 +1,9 @@
 Revision history for Class-Method-Cache-FastMmap
 
 {{$NEXT}}
+  [Enhancements]
+  - Use Exporter::Tiny to allow wrapper method to be renamed.
+
   [Documentation]
   - Fixed minor typo in POD.
 

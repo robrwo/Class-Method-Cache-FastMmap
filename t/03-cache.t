@@ -7,14 +7,14 @@ use v5.10.1;
 use Moo;
 
 use Cache::FastMmap;
-use Class::Method::Cache::FastMmap;
+use Class::Method::Cache::FastMmap cache => { -as => 'memoize' };
 
 has delay => (
     is      => 'ro',
     default => 1,
 );
 
-sub _cache {
+sub cache {
     state $cache = Cache::FastMmap->new();
     return $cache;
 }
@@ -31,8 +31,8 @@ sub count {
     }
 }
 
-cache 'count' => (
-    cache  => __PACKAGE__->_cache,
+memoize 'count' => (
+    cache  => __PACKAGE__->cache,
     key_cb => sub { join( '-', $_[0]->[1], $_[0]->[2] // 0 ) },
 );
 
@@ -50,7 +50,7 @@ foreach ( 1 .. 3 ) {
 
 }
 
-my @keys = $obj->_cache->get_keys(0);
+my @keys = $obj->cache->get_keys(0);
 cmp_deeply \@keys,
     bag( map { "Foo::count::" . $_ } qw/ 0-1 0-2 0-3 1-0 1-1 1-2 2-0 2-1 3-0 / ),
     "get_keys";

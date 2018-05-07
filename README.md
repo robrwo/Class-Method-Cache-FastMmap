@@ -73,6 +73,23 @@ The `%options` are as follows:
 Remaining `%options` are passed to the constructor for
 [Cache::FastMmap](https://metacpan.org/pod/Cache::FastMmap).
 
+As of v0.3.0, you can import the `cache` method with a different
+namme:
+
+```perl
+use Class::Method::Cache::FastMmap
+   "cache" => { -as => "memoize" };
+
+sub my_method {
+  ...
+}
+
+memoize 'my_method' => (
+   serializer  => 'storable',
+   expire_time => '1h',
+);
+```
+
 # SEE ALSO
 
 [Cache::FastMmap](https://metacpan.org/pod/Cache::FastMmap)

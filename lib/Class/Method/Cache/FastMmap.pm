@@ -7,9 +7,10 @@ use v5.10.1;
 use strict;
 use warnings;
 
+use base 'Exporter::Tiny';
+
 use Cache::FastMmap;
 use Class::Method::Modifiers qw/ install_modifier /;
-use Exporter qw/ import /;
 use Object::Signature ();
 
 our $VERSION = 'v0.3.0';
@@ -79,6 +80,22 @@ Added v0.2.0.
 
 Remaining C<%options> are passed to the constructor for
 L<Cache::FastMmap>.
+
+As of v0.3.0, you can import the C<cache> method with a different
+namme:
+
+  use Class::Method::Cache::FastMmap
+     "cache" => { -as => "memoize" };
+
+  sub my_method {
+    ...
+  }
+
+  memoize 'my_method' => (
+     serializer  => 'storable',
+     expire_time => '1h',
+  );
+
 
 =cut
 
