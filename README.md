@@ -48,6 +48,8 @@ The `%options` are as follows:
     is used to specify a different (shared) cache. You may use another
     caching class, so long as it provides `get` and `set` methods.
 
+    Added v0.2.0.
+
 - `key_cb`
 
     is used to provide a custom key-generation function.  If
@@ -65,6 +67,8 @@ The `%options` are as follows:
     This is the prefix too prepend to the key. It defaults to the class
     and method name when the ["cache"](#cache) is specified, or an empty string
     otherwise.
+
+    Added v0.2.0.
 
 Remaining `%options` are passed to the constructor for
 [Cache::FastMmap](https://metacpan.org/pod/Cache::FastMmap).

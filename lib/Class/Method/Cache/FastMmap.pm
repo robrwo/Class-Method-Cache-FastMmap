@@ -55,6 +55,8 @@ The C<%options> are as follows:
 is used to specify a different (shared) cache. You may use another
 caching class, so long as it provides C<get> and C<set> methods.
 
+Added v0.2.0.
+
 =item C<key_cb>
 
 is used to provide a custom key-generation function.  If
@@ -70,6 +72,8 @@ corresponding to the original method call parameters:
 This is the prefix too prepend to the key. It defaults to the class
 and method name when the L</cache> is specified, or an empty string
 otherwise.
+
+Added v0.2.0.
 
 =back
 

@@ -4,6 +4,8 @@ Revision history for Class-Method-Cache-FastMmap
   [Documentation]
   - Fixed minor typo in POD.
 
+  - Added API version to options.
+
 v0.2.0    2018-05-07 13:33:32+01:00 Europe/London
   [Enhancements]
   - Added cache and prefix options for using a shared cache object.
