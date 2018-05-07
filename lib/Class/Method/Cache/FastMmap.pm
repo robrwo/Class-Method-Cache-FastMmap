@@ -46,16 +46,35 @@ This wraps the C<$method> with a function that caches the return value.
 It assumes that the method returns a defined scalar value and that the
 method arguments are serialisable.
 
-The C<%options> are used to configure L<Cache::FastMmap>.
+The C<%options> are as follows:
 
-A special option called C<key_cb> is used to provide a custom
-key-generation function.  If none is specified, then
-L<Object::Signature> is used.
+=over 4
+
+=item C<cache>
+
+is used to specify a different (shared) cache. You may use another
+caching class, so long as it provides C<get> and C<set> methods.
+
+=item C<key_cb>
+
+is used to provide a custom key-generation function.  If
+none is specified, then L<Object::Signature> is used.
 
 The function should expect a single argument with an array reference
 corresponding to the original method call parameters:
 
   $key_cb->( [ $self, @_ ] );
+
+Remaining C<%options> are passed to the constructor for
+L<Cache::FastMmap>.
+
+=item C<prefix>
+
+This is the prefix too prepend to the key. It defaults to the class
+and method name when the L</cache> is specified, or an empty string
+otherwise.
+
+=back
 
 =cut
 
@@ -64,15 +83,18 @@ sub cache {
 
     my $target = caller;
 
+    my $global = delete $options{cache};
+    my $prefix = delete $options{prefix}
+      // ( $global ? "${target}::${method}::" : '' );
     my $key_cb = delete $options{key_cb} // \&Object::Signature::signature;
 
     install_modifier $target, 'around', $method, sub {
         my $next = shift;
         my $self = shift;
 
-        state $cache = Cache::FastMmap->new(%options);
+        state $cache = $global // Cache::FastMmap->new(%options);
 
-        my $key = $key_cb->( [ $self, @_ ] );
+        my $key = $prefix . $key_cb->( [ $self, @_ ] );
         my $value = $cache->get($key);
         unless ( defined $value ) {
             $cache->set( $key, $value = $self->$next(@_) );
