@@ -1,6 +1,8 @@
 Revision history for Class-Method-Cache-FastMmap
 
 {{$NEXT}}
+
+v0.3.2    2018-05-14 21:16:47+01:00 Europe/London
   [Tests]
   - Removed unnecessary prereqs from testing.
 
