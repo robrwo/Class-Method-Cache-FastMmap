@@ -1,6 +1,8 @@
 Revision history for Class-Method-Cache-FastMmap
 
 {{$NEXT}}
+  [Documentation]
+  - Explicitly documented that undef is not cached.
 
 v0.3.0    2018-05-07 16:06:20+01:00 Europe/London
   [Enhancements]

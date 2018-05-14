@@ -96,6 +96,8 @@ namme:
      expire_time => '1h',
   );
 
+Undefined results are not cached. So if your method returns C<undef>
+on failure, then it never cache that result.
 
 =cut
 

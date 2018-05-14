@@ -90,6 +90,9 @@ memoize 'my_method' => (
 );
 ```
 
+Undefined results are not cached. So if your method returns `undef`
+on failure, then it never cache that result.
+
 # SEE ALSO
 
 [Cache::FastMmap](https://metacpan.org/pod/Cache::FastMmap)
