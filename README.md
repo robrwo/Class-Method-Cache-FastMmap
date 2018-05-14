@@ -117,6 +117,9 @@ feature.
 
 Robert Rothenberg <rrwo@cpan.org>
 
+Some development of this module was sponsored by Science Photo Library
+[https://www.sciencephoto.com](https://www.sciencephoto.com).
+
 # COPYRIGHT AND LICENSE
 
 This software is Copyright (c) 2018 by Robert Rothenberg.

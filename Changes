@@ -4,6 +4,8 @@ Revision history for Class-Method-Cache-FastMmap
   [Documentation]
   - Explicitly documented that undef is not cached.
 
+  - Added acknowledgement to Science Photo Library.
+
 v0.3.0    2018-05-07 16:06:20+01:00 Europe/London
   [Enhancements]
   - Use Exporter::Tiny to allow wrapper method to be renamed.

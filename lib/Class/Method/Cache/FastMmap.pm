@@ -133,6 +133,11 @@ L<Cache::FastMmap>
 
 L<Object::Signature>
 
+=head1 append:AUTHOR
+
+Some development of this module was sponsored by Science Photo Library
+L<https://www.sciencephoto.com>.
+
 =cut
 
 1;
