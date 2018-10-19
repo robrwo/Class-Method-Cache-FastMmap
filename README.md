@@ -4,7 +4,7 @@ Class::Method::Cache::FastMmap - Cache method results using Cache::FastMmap
 
 # VERSION
 
-version v0.3.2
+version v0.3.3
 
 # SYNOPSIS
 
